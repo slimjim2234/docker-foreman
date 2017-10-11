@@ -1,0 +1,13 @@
+version: "2"
+services:
+    foreman:
+        build: .
+        ports:
+            - "8443:443"
+            - "8080:80"
+        hostname: "hostname.host.name"
+        volumes:
+            - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+              #        privileged: true
+        cap_add:
+            - SYS_ADMIN

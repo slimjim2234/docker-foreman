@@ -1,0 +1,9 @@
+[Unit]
+Description=Run foreman service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/first_run.sh
+
+[Install]
+WantedBy=multi-user.target
